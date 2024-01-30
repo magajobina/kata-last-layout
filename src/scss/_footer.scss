@@ -1,0 +1,60 @@
+.footer {
+  color: $color-secondary;
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 1.114em;
+  padding: 16px 0 20px;
+  border-top: #D9FFF5 1px solid;
+
+  @media (min-width: 1366px) {
+    margin-left: $sidebar-width;
+
+  }
+
+  &__inner {
+    display: grid;
+    gap: 16px;
+    text-align: center;
+    justify-content: center;
+
+    @media (min-width: 768px) {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 36px;
+    }
+  }
+  
+  &__team {
+    opacity: 0.7218;
+
+    @media (min-width: 768px) {
+      text-align: left;
+    }
+  }
+  
+  &__policy {
+    opacity: 0.7218;
+    
+  }
+  
+  &__inform {
+    opacity: 0.7218;
+    max-width: 330px;
+
+    @media (min-width: 768px) {
+      text-align: right;
+      justify-self: end; 
+    }
+  }
+
+  .container {
+    padding: 0 4px;
+  
+    @media (min-width: 768px) {
+      padding: 0 24px;
+    }
+  
+    @media (min-width: 1120px) {
+      padding: 0 32px;
+    }
+  }
+}

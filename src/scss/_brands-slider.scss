@@ -1,0 +1,140 @@
+.main__brands-slider {
+  margin-top: 24px;
+
+  @media (min-width: 768px) {
+    margin-top: 32px;
+  }
+
+  @media (min-width: 1120px) {
+    margin-top: 50px;
+  }
+
+  &--huge-btns {
+    .brands-slider__swiper-btn {
+      height: 160px;
+      font-weight: 500;
+      font-size: 16px;
+      line-height: 1.5em;
+      letter-spacing: -0.2px;
+      align-items: start;
+      padding: 16px;
+
+      &::after {
+        align-self: end;
+      }
+    }
+
+  }
+}
+
+.brands-slider {
+
+  &__swiper {
+    margin-top: 16px;
+    margin-left: 16px;
+
+    @media (min-width: 768px) {
+      margin: 24px 24px 0px;
+    }
+
+    &::before {
+      content: '';
+      display: block;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 24px;
+      height: 72px;
+      background: linear-gradient(270deg, #F8F8F8 16.84%, rgba(248, 248, 248, 0.00) 100%);
+      z-index: 2;
+      user-select: none;
+      pointer-events: none;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+
+    &-btn {
+      padding: 0 16px;
+      height: 72px;
+      border-radius: 6px;
+      border: 1px solid #EAEAEA;
+      background: #FFF;
+      display: grid;
+      grid-template-columns: 158px 40px;
+      align-items: center;
+      gap: 8px;
+      transition: all .3s;
+      width: 100%;
+
+      img {
+        max-width: 128px;
+        max-height: 50px;
+      }
+
+      @media (min-width: 768px) {
+        grid-template-columns: 1fr auto;
+      }
+
+      @media (min-width: 1120px) {
+        &:hover {
+          opacity: 1;
+          // background-color: #efefef;
+          transform: scale(1.015);
+        }
+      }
+
+      &::after {
+        content: '';
+        display: block;
+        width: 40px;
+        height: 40px;
+        background: url('../images/brands-slider/go.svg') no-repeat;
+
+        @media (min-width: 768px) {
+          margin-left: auto; 
+        }
+      }
+
+
+    }
+
+    &-wrapper {
+      @media (min-width: 768px) {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 16px 24px;
+      }
+
+      @media (min-width: 1120px) {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 16px 32px;
+      }
+    }
+  }
+
+  &__slide {
+    width: auto;
+    // display: none;
+
+    &--hidden {
+      display: none;
+    }
+  }
+
+  &__show {
+    margin-top: 24px;
+    display: none;
+
+    @media (min-width: 768px) {
+      display: flex;
+    }
+
+    &--shown::before {
+      transform: rotate(180deg);
+    }
+  }
+
+}
+

@@ -1,0 +1,205 @@
+.main__price {
+  margin-top: 24px;
+  margin-bottom: 40px;
+
+  @media (min-width: 768px) {
+    margin-bottom: 47px;
+  }
+}
+
+.price {
+
+  &__slider {
+    margin-top: 16px;
+    padding-left: 8px;
+
+    @media (min-width: 768px) {
+      padding-left: 0;
+    }
+  }
+
+  &__wrapper {
+
+    @media (min-width: 768px) {
+      display: block;
+      width: auto;
+      margin: 0 24px;
+      background: #fff;
+      border-radius: 6px;
+    }
+  }
+
+  &__slide {
+    width: 260px;
+    min-height: 200px;
+    height: auto;
+    background: #fff;
+    border-radius: 6px;
+    font-size: 14px;
+    line-height: 1.285em;
+    letter-spacing: 0.2px;
+    padding: 16px;
+    display: grid;
+    row-gap: 16px;
+    grid-template-columns: auto 120px;
+
+    @media (min-width: 768px) {
+      width: auto;
+      min-height: auto;
+      grid-template-columns: 4fr 1fr 1fr 120px;
+      column-gap: 20px;
+      background: transparent;
+      position: relative;
+
+      &::after {
+        content: '';
+        display: block;
+        height: 1px;
+        background: #EAEAEA;
+        width: 97%;
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+      }
+
+      &:first-child::after {
+        display: none;
+      }
+    }
+
+    @media (min-width: 1120px) {
+      grid-template-columns: 4fr 1.4fr 1.2fr 120px;
+      column-gap: 20px;
+    }
+
+    &--head {
+      display: none;
+      margin: 0 24px;
+      color: $color-secondary;
+      opacity: 0.7218;
+      font-weight: 500;
+      font-size: 14px;
+
+      @media (min-width: 768px) {
+        display: grid;
+      }
+    }
+
+    & div::before {
+      display: block;
+      color: $color-secondary;
+      font-weight: 500;
+      line-height: 1.114em;
+      opacity: 0.7218;
+      padding-bottom: 4px;
+
+      @media (min-width: 768px) {
+        display: none;
+      }
+    }
+  }
+
+  &__name {
+    grid-column: span 2;
+    
+    &::before {
+      content: 'Ремонтные услуги';
+    }
+
+    @media (min-width: 768px) {
+      grid-column: auto;
+      align-self: center;
+    }
+  }
+
+  &__price {
+    grid-column: span 2;
+    align-self: center;
+    
+    &::before {
+      content: 'Цена';
+    }
+
+    @media (min-width: 768px) {
+      grid-column: auto;
+      align-self: center;
+    }
+  }
+  
+  &__period {
+    align-self: end;
+
+    &::before {
+      content: 'Срок';
+    }
+
+    @media (min-width: 768px) {
+      grid-column: auto;
+      align-self: center;
+    }
+  }
+
+  // &__btn {
+  //   color: #fff;
+  //   border-radius: 16px;
+  //   background: #FF3E79;
+  //   font-size: 12px;
+  //   font-weight: 700;
+  //   line-height: 2em;
+  //   letter-spacing: -0.15px;
+  //   text-transform: uppercase;
+  //   display: flex;
+  //   align-items: center;
+  //   justify-content: space-between;
+  //   gap: 8px;
+  //   padding: 4px 8px 4px 12px;
+  //   align-self: end;
+
+  //   &::after {
+  //     content: '';
+  //     width: 24px;
+  //     height: 24px;
+  //     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none'%3E%3Crect width='24' height='24' rx='12' fill='%23FF3E79'/%3E%3Cpath fill-rule='evenodd' clip-rule='evenodd' d='M12.8 11.9999L9.79155 9.229C9.3641 8.83529 9.36112 8.16138 9.78509 7.76392L9.92029 7.63716C10.3032 7.27818 10.8985 7.27633 11.2836 7.63294L15.9381 11.9426C15.9715 11.9735 15.9715 12.0263 15.9381 12.0572L11.3467 16.3085C10.9261 16.698 10.2758 16.696 9.85755 16.3039C9.39446 15.8697 9.39771 15.1336 9.86462 14.7036L12.8 11.9999Z' fill='white'/%3E%3C/svg%3E");
+  //   }
+
+  //   @media (min-width: 768px) {
+  //     grid-column: auto;
+  //     align-self: center;
+  //   }
+  // }
+
+  &__remark {
+    margin-top: 16px;
+
+    &-text {
+      font-size: 14px;
+      line-height: 1.428em;
+      letter-spacing: 0.2px;
+      margin-bottom: 16px;
+      max-width: 421px;
+    }
+
+    &-commerce {
+      // margin-top: 30px;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 1.5em;
+      letter-spacing: -0.2px;
+      
+      span {
+        white-space: nowrap;
+
+        &::after {
+          content: '';
+          width: 24px;
+          height: 28px;
+          display: inline-block;
+          vertical-align: top;
+          background: url('../images/more.svg');
+        }
+      }
+    }
+  }
+
+}
